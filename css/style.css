@@ -1,0 +1,261 @@
+@import url('https://fonts.googleapis.com/css2?family=Yeseva+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@1,800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Girassol&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chewy&family=Special+Elite&display=swap');
+* {
+    margin: 0px;
+    padding: 0px;
+    outline: none;
+    border: none;
+    vertical-align: baseline;
+}
+body {
+    width: 100vw;
+    background-color: #333333;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: 100% ;
+    grid-auto-rows:10% repeat(4,2fr) 15%;
+    grid-template-areas: "navbar" "header" "aboutme" "mywork" "contacts" "footer";
+    width: 100vw;
+}
+
+.navbar {
+    grid-area: navbar;
+    background-color:#333333;
+    position: fixed;
+    width: 100%;
+    vertical-align: middle;
+    text-align: center;
+    padding: 20px 0px 20px 0px;
+    
+}
+
+.navbar li {
+    display: block;
+}
+.dropdown {
+    display: none;
+    float: right;
+    overflow: hidden;
+}
+.dropbtn_contents {
+display: none;
+}
+/* button { 
+    color: #dddddd;
+    background-color:#333333;
+    border: solid;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: 'chewy';
+    padding: 0% 1% 0% 1%;
+}
+button:hover {
+    background :#f37121;
+    position: sticky;
+} */
+
+button{
+    position: relative;
+    /* padding: 0.5% 3% 0.5% 3%; */
+    padding:0.4rem 4.2rem;
+    /* font-size: 1.4rem; */
+    color: whitesmoke;
+    background-color:#12345678;
+    border: solid;
+    text-align: center;
+    font-size: xx-large;
+    font-weight: bold;
+    font-family: 'chewy';
+    letter-spacing: 1.1rem;
+    text-transform: uppercase;
+    transition: all 500ms  cubic-bezier(0.77, 0, 0.175, 1);
+    cursor: pointer;
+    user-select: none;
+}
+
+
+button::before, button::after {
+    content: '';
+    position: absolute;
+    transition: inherit;
+    z-index: -1;
+}
+
+button:hover {
+    color:#ff5200 ;
+    transition-delay: .20ms;
+    opacity: 0.5;
+}
+/* button:hover::before{
+    transition-delay: 0s;
+}
+button:hover::after{
+    background: greenyellow;
+    transition-delay: .35s;
+} */
+#header {
+    grid-area: header;
+    background-image: url('../images/rsz_2mylogo.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    padding: 0px;
+    font-size: 68px;
+    font-family: 'special elite' ,cursive;
+}
+
+.intro { 
+    background-color: #333333;
+    margin-top: 15%;
+    margin-left: 4%;
+    width: 48%;
+    height: 36%;
+    padding: 8% 3% 0% 3%;
+}
+.greetings {
+    color: #ff0000;
+    margin-left: 7%;
+}
+.am {
+    color: #ff5200;
+}
+.name {
+    color: #ff0000;
+    text-align: center;
+    margin-left: 1%;
+}
+
+.jobtitle{
+    color: #ff5200;
+    font-size: 56px;
+    text-align: center;
+    margin: 16% 0% 4% 0%;
+   
+}
+
+#aboutme{
+    grid-area: aboutme;
+    background-color:transparent;
+    height: 100%;
+    
+}
+h1 {
+    color: #ff5200;
+    font-size: 750%;
+    margin: 5% 0% 0% 1%;
+    font-family: 'yeseva one';
+}
+.innerDiv {
+    background: linear-gradient(rgb(207, 200, 200), rgb(105, 104, 104), rgb(49, 48, 48));
+    background-repeat: repeat;
+    border: rgb(107, 105, 104) double;
+    border-radius: 2% ;
+    margin: 1% 5% 3% 7%;
+    height: 75%;
+    width: 80vw;
+    color: snow;
+    font-style: italic;
+    font-size: 200%;
+    font-family: 'Girassol';
+    padding: 2%;
+    box-shadow: 0 1px 6px rgba(251, 247, 247, 0.12), 0 1px 4px rgba(255, 253, 253, 0.24);
+}
+h3 {
+    color: #ff5200;
+    font-size: 145%;
+    margin: 3% 0% 1% 1%;
+    font-family: 'yeseva one';
+}
+.languages {
+    list-style: square;
+    columns: 3;
+    margin-left: 14%;
+}
+.tech_skills {
+    list-style: square;
+    columns: 4;
+    margin-left: 10%;
+  }
+
+  
+#mywork {
+    grid-area: mywork;
+    background: transparent;
+    height: 100%;
+}
+#mywork h3 {
+    text-align: center;
+} 
+
+.image {
+    height: 240px
+}
+.image:hover{
+    opacity: 0.6 ;
+  
+}
+.listofmywork {
+    list-style: square;
+    columns: 2;
+    margin: 4% 0% 0% 14%; 
+
+}
+
+.work {
+   display: inline;
+}
+.tech_used {
+    display: block;
+}
+#contacts{
+    grid-area: contacts;
+    background: transparent;
+    height: 100vh;
+    
+}
+.contacticon {
+    width: 24%;
+    vertical-align: middle;
+    margin: 1%;
+  }
+  
+  .contacticon:hover {
+    opacity: 0.5;
+  }
+  
+  a:link {
+  color: rgb(5, 32, 95);
+  }
+  a:hover {
+    background-color: #ff5200;
+  }
+  #contacts li {
+    display: block;
+    margin-bottom: 10%;
+    margin-right: 0%;
+  }
+  
+  .contactlist {
+    list-style: disc;
+    columns: 2;
+    margin-left: 14%;
+  }
+
+.footer {
+    grid-area: footer;
+    background-color: rgb(0, 0, 0);
+    font-size: 100%;
+    color: white;
+    width: 100vw;
+    height: 70px;
+    vertical-align: middle;
+    text-align: center;
+    font-size: 200%;
+    padding: 1%;
+}
